@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title></title>
+    <meta content="text/html; charset=utf-8" http-equiv="content-type">
+  </head>
+  <body>
+    <div class="menu">
+      <input type="button" value="b1" />
+      <input type="button" value="b2" />
+      <input type="button" value="b3" />
+    </div>
+    <input id="off" type="button" value="off" />
+    <script src="jquery-1.8.3.min.js"></script>
+    <!--
+    <script src="jq.mobi.min.js"></script>
+    -->
+    <!--
+    <script src="zepto.min.js"></script>
+    <script src="event.min.js"></script>
+    -->
+    <script src="../src/jquery-view.js"></script>
+    <script>
+        var console = console || { log: function (s) { alert(s); } },
+            events = {
+                'ready': function () {
+                    console.log('dom loaded');
+                },
+
+                'load@window': function () {
+                    console.log('window loaded');
+                },
+
+                'click@document': function () {
+                    console.log('document clicked');
+                },
+
+                // This code doesn't work in less than IE9. Use "ready" instead.
+                'DOMContentLoaded@document': function () {
+                    console.log('document DOMContentLoaded');
+                },
+
+                'click@.menu input': function (evt) {
+                    evt.stopPropagation();
+                    console.log(evt.srcElement.value + ' clicked');
+                },
+
+                'click@#off': function (evt) {
+                    evt.stopPropagation();
+                    // Unregister events.
+                    $().view.off(events);
+                    console.log('unregister events');
+                }
+            };
+
+        // Register events
+        $().view.on(events);
+
+    </script>
+  </body>
+</html>

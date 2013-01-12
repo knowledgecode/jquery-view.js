@@ -21,7 +21,7 @@
     -->
     <script src="../src/jquery-view.js"></script>
     <script>
-        var console = console || { log: function (s) { alert(s); } },
+        var console = window.console || { log: function (s) { alert(s); } },
             events = {
                 'ready': function () {
                     console.log('dom loaded');

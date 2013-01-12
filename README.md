@@ -41,7 +41,7 @@ To bind events is below.
     // Register events
     $().view.on(events);
 
-The syntax is "eventname" + "@" + "selector".
+The syntax is "eventname" + "@" + "selector".  
 Not accepted anything that does not conform to this syntax. However, when use a "DOMContentLoaded" event, use "ready" instead.
 
 ### $().view.off(object)

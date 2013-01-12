@@ -1,5 +1,5 @@
-# jQuery-View
-jQuery-View is a jQuery plugin. Work in jQuery or other compatible library (ex. jQMobi, Zepto).  
+# jQuery-View.js
+jQuery-View.js is a jQuery plugin. Work in jQuery or other compatible library (ex. jQMobi, Zepto).  
 "View" of jQuery-View means "V" of MVC framework, It is also syntax sugar of "on" and "off" methods for event bindings.  
 
 ## Usage
